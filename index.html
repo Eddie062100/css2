@@ -4,7 +4,108 @@
 <head>
   <meta charset="UTF-8">
   <style>
-    /* 👉 Task 1- Apply the reset found on this page: https://www.joshwcomeau.com/css/custom-css-reset/ */
+   /*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+#root, #__next {
+  isolation: isolate;
+}
+
+
+
+
+body {
+  font-family: Arial;
+}
+#headerTop{
+  color: white;
+  padding: 2rem;
+  background-color: darkolivegreen;
+}
+#headerTop > div {
+  display: inline-block;
+}
+#headerTop > div >span {
+  margin-right: 1.5rem;
+}
+#headerTop > div > span:first-child {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#headerBottom {
+  border-bottom: 1px solid gray;
+  padding: 1rem;
+
+}
+#headerBottom>div {
+  display: inline-block;
+  
+}
+#headerBottom > div:first-child {
+color: goldenrod;
+font-weight: bold;
+background: fixed;
+padding: 0.5rem;
+border-radius: 1rem;
+margin-right: 1rem;
+cursor: pointer;
+}
+#headerBottom button {
+  border: none; 
+  background: none; 
+  padding: 0;
+  margin-right: 10px; 
+  cursor: pointer;
+}
+#headerBottom button.active {
+  font-weight: bold;
+  border-bottom: 2px solid goldenrod;
+}
+.email > div {
+  display: inline-block;
+  
+}
+.email {
+  padding: 1rem;
+  padding-left: 1.5rem;
+  border-bottom: 1px solid lightgray;
+
+}
+ .email > div {
+  display: inline-block;
+  width: 8%;
+}
+.email-name,
+.email-subject {
+  width: 35%;
+  margin: 0.5rem;
+} 
+.email:nth-child(2) {
+ font-weight: bold;
+}
+
+
 
   </style>
   <style>
@@ -68,11 +169,11 @@
 
 <body>
   <div id="instructions">
-    <h1>HTML & CSS II</h1>
+    <!-- <h1>HTML & CSS II</h1>
     <p>Please load this file in VSCode and Chrome, and open the Elements tab, Sources sub-tab, in Chrome Dev Tools.</p>
     <p>Work through the challenges found inside both style tags in this document.</p>
     <p>You will find a screenshot of the end result inside the design folder.</p>
-    <p>You can now comment out the h1 and the p tags...</p>
+    <p>You can now comment out the h1 and the p tags...</p> -->
   </div>
   <div>
     <header>
@@ -88,7 +189,7 @@
       <div id="headerBottom">
         <div>Compose</div>
         <div>
-          <button>All mail</button>
+          <button class="active">All mail</button>
           <button>Unread</button>
           <button>Pinned</button>
           <button>VIPs</button>
